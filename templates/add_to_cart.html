@@ -1,0 +1,12 @@
+# add_to_cart.html
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Add To Cart</h1>
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="cart_id" value="{{cart.id}}">
+    <button type="submit">Add To Cart</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+# cart.html_template
+
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1>Shopping Cart</h1>
+   <ul>
+     {% for item in object_list %}
+       <li>{{ item.product.name }} ({{ item.quantity }})</li>
+     {% endfor %}
+    </ul>
+    <a href="{% url 'add_to_cart' %}">Add To Cart</a>
+    < a href="{% url 'remove_from_cart' %}"> Remove From Cart</a>
+{% endblock % }

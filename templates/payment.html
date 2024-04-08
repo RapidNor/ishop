@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Complete Your Purchase</h1>
+        <p>Please click the button below to pay with PayPal:</p>
+        <div class="payment-form">
+            {{ form.render }}
+        </div>
+    </div>
+</body>
+</html>
